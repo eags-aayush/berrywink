@@ -1,0 +1,65 @@
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes waveform {
+  0%, 100% {
+    transform: scaleY(0.5);
+  }
+  50% {
+    transform: scaleY(1.5);
+  }
+}
+
+.animate-float {
+  animation-name: float;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+.animate-waveform {
+  animation-name: waveform;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Custom scrollbar for personality carousel */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Tailwind config for custom colors */
+/* Add to tailwind.config.js */
+/*
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        berry: {
+          50: '#fff0f6',
+          100: '#ffe0ed',
+          200: '#ffc2dd',
+          300: '#ff93c2',
+          400: '#ff539e',
+          500: '#f3127e',
+          600: '#d40b6a',
+          700: '#b20657',
+          800: '#8f0245',
+        },
+      }
+    }
+  }
+}
+*/

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Light Theme */
+  --color-bg: #FAFAFA;
+  --color-bg-secondary: #F5C5FE;
+  --color-text: #2E2E2E;
+  --color-primary: #D72638;
+  --color-secondary: #EAADFF;
+  --color-accent: #4c00ff;
+  --color-card-bg: #ffffff;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  
+  /* Dark Theme */
+  --color-bg-dark: #130041;
+  --color-bg-secondary-dark:  #F5C5FE;
+  --color-text-dark: #FAFAFA;
+  --color-card-bg-dark: #130025;
+  --color-shadow-dark: rgba(0, 0, 0, 0.3);
+}
+
+.dark {
+  --color-bg: var(--color-bg-dark);
+  --color-bg-secondary: var(--color-bg-secondary-dark);
+  --color-text: var(--color-text-dark);
+  --color-card-bg: var(--color-card-bg-dark);
+  --color-shadow: var(--color-shadow-dark);
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-marquee { animation: marquee 40s linear infinite; }
+.animate-marquee-reverse { animation: marquee-reverse 40s linear infinite; }
+.animate-marquee:hover { animation-play-state: paused; }
+.animate-marquee-reverse:hover { animation-play-state: paused; }
